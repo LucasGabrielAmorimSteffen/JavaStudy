@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class conversorTemperaturas {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        double c = 0;
-        double f = 0;
+        float c = 0;
+        float f = 0;
 
         while(true){
             System.out.println("Qual unidade de temperatura você deseja converter?");
@@ -35,22 +35,22 @@ public class conversorTemperaturas {
         input.close();
     }
 
-    public static void celsiusConverter(double c, Scanner input){
+    public static void celsiusConverter(float c, Scanner input){
         System.out.println("Digite quantos Celsius quer converter: ");
-        c = input.nextDouble();
-        double resultado = (c * 9/5) + 32;
-        double f = resultado;
+        c = input.nextFloat();
+        float resultado = (c * 9/5) + 32;
+        float f = resultado;
 
         System.out.println("\n_____________________________________________________");
         System.out.println(c + " Celsius é igual a " + f + " Fahrenheit");
         System.out.println("_____________________________________________________");
     }
 
-    public static void fahrenheitConverter(double f, Scanner input){
+    public static void fahrenheitConverter(float f, Scanner input){
         System.out.println("Digite quantos Fahrenheit quer converter: ");
-        f = input.nextDouble();
-        double resultado = -32 * 5/9;
-        double c = resultado;
+        f = input.nextFloat();
+        float resultado = (f -32) * 5/9;
+        float c = resultado;
 
         System.out.println("\n_____________________________________________________");
         System.out.println(f + " Fahrenheit é igual a " + c + " Celsius");
